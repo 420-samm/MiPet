@@ -50,6 +50,7 @@ header {
 .logo-container i {
   font-size: 24px;
 }
+
 nav {
   display: flex;
   justify-content: space-between;
@@ -492,7 +493,11 @@ footer li {
   .smaller-images {
       display: none;
   }
-
+  
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
 }
 
 @media screen and (max-width: 480px) {
