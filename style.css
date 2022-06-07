@@ -1,0 +1,559 @@
+/* Import Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Cabin:wght@400..700&family=Lato:wght@400;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-blue: #0084ff;
+  --misc-blue: rgba(156, 206, 254, 0.2);
+  --misc-yellow: #ff9e00;
+  --section-padding: 7vh 7vw;
+}
+
+body {
+  font-family: "Cabin", "Lato", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.cta a {
+  color: white;
+  background: var(--misc-yellow);
+  font-size: 0.8rem;
+  text-decoration: none;
+  padding: 7px 15px;
+  border-radius: 4px;
+  box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.07);
+}
+
+.cta a:hover {
+  background: #e48f05;
+  transition: 0.3s;
+}
+
+header {
+  background: var(--primary-blue);
+  padding: 5vh 7vw;
+  color: white;
+  white-space: nowrap;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-container i {
+  font-size: 24px;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+
+.nav-link {
+  list-style: none;
+  display: inline-block;
+  font-size: 0.9rem;
+}
+
+.nav-link a {
+  color: white;
+  text-decoration: none;
+  position: relative;
+}
+
+/* Hover Effect For the Navigation Links */
+.nav-link a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  border-radius: 4px;
+  background-color: white;
+  bottom: -5px;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.4s ease-in-out;
+}
+
+.nav-link a:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+.hamburger-icon {
+  position: absolute;
+  top: 15px;
+  right: 7vw;
+}
+
+section.hero {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--primary-blue);
+  padding: var(--section-padding);
+  padding-bottom: 0;
+  color: white;
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 400px;
+  line-height: 1.5;
+}
+
+/* Add Transparency to the paragraph */
+.hero-text p {
+  opacity: 0.8;
+}
+
+.section-header {
+  font-size: 2.4rem;
+  font-weight: 600;
+}
+
+section.hero img {
+  border: 4px solid white;
+  border-radius: 50% 50% 0 0;
+  width: 400px;
+  max-width: 100%;
+}
+
+/* SERVICES SECTION */
+
+.services {
+  margin: 7vh auto;
+  padding: var(--section-padding);
+}
+
+.services > h2 {
+  font-size: 2.1rem;
+  padding: 0.5rem 0;
+  text-align: center;
+}
+
+.services > p {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #848484;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin: 7vh 0;
+}
+
+.grid-card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 2rem 15px;
+  background: var(--misc-blue);
+  border-radius: 5px;
+  line-height: 1.5;
+}
+
+.grid-card i {
+  font-size: 20px;
+  color: white;
+  background: var(--primary-blue);
+  padding: 10px;
+  border-radius: 50%;
+  width: fit-content;
+}
+
+.grid-card p {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.blue-card {
+  background: var(--primary-blue);
+  color: white;
+}
+
+.blue-card i {
+  color: var(--primary-blue);
+  background: white;
+}
+
+.learn-more {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  color: var(--primary-blue);
+  cursor: pointer;
+}
+
+/* WHY CHOOSE US SECTION */
+
+.choose-us {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--section-padding);
+  background: rgba(255, 158, 0, 0.08);
+}
+
+.choose-img {
+  position: relative;
+  display: inline-block;
+  width: fit-content;
+}
+
+.choose-img img {
+    border-radius: 5px;
+}
+.smaller-images {
+  border: 3px solid var(--primary-blue);
+  width: 110px;
+  height: 90px;
+}
+
+.smaller-images:nth-child(2) {
+    position: absolute;
+    top: 0;
+    left: 260px;
+    transform: rotate(30deg);
+}
+
+.smaller-images:nth-child(3) {
+  position: absolute;
+  top: 37%;
+  left: 260px;
+  border: 3px solid var(--misc-yellow);
+}
+
+.smaller-images:nth-child(4) {
+    position: absolute;
+    bottom: 0;
+    left: 260px;
+    transform: rotate(-30deg);
+}
+
+.choose-text {
+    width: 450px;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.choose-text > p {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.reason {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px 0;
+    font-size: 0.9rem;
+}
+
+.reason i {
+    color: white;
+    background: var(--primary-blue);
+    padding: 2px;
+    border-radius: 2px;
+    font-size: 10px;
+}
+
+.caregivers {
+    display: flex;
+    padding: var(--section-padding);
+    margin: 7vh 0;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.caregiver-text {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 400px;
+}
+
+.caregiver-text > p {
+    color: #848484;
+}
+
+
+.see-more {
+    display: flex;
+    color: var(--primary-blue);
+    align-items: center;
+    gap: 5px;
+}
+
+.caregiver-img {
+    display: flex;
+    gap: 30px;
+    max-width: 100%;
+}
+
+.image-container {
+    background: var(--misc-blue);
+    border-radius: 5px;
+}
+
+.image-container img {
+    width: 220px;
+    border-radius: 5px 5px 0 0;
+    max-width: 100%;
+}
+
+.profile-text {
+    padding: 10px;
+}
+
+.profile-text p:first-of-type {
+    color: var(--primary-blue);
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 5px 0;
+}
+
+.profile-text p:last-of-type {
+    font-size: 0.8rem;
+    color: #848484;
+}
+
+section.consultation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--misc-yellow);
+    padding: var(--section-padding);
+    color: white;
+    
+}
+
+.consultation-text {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    width: 550px;
+    max-width: 100%;
+}
+
+.online-consultation {
+    opacity: 0.9;
+}
+
+.online-consultation p {
+    font-size: 0.8rem;
+    padding: 1rem 0;
+}
+.consultation-text img {
+    border-radius: 50%;
+}
+
+.contact-us a {
+    color: white;
+    text-decoration: none;
+    background: var(--primary-blue);
+    border-radius: 5px;
+    padding: 10px 20px;
+    white-space: nowrap;
+}
+
+.contact-us a i {
+    padding: 0 5px;
+}
+
+footer {
+  padding: var(--section-padding);
+  background: var(--primary-blue);
+  color: white;
+}
+
+footer p, 
+footer li {
+  opacity: 0.8;
+}
+
+.footer-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 50px;
+}
+
+.bottom-contact > * {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0;
+} 
+
+.bottom-logo i {
+  font-size: 24px;
+}
+
+.bottom-nav ul li {
+  list-style: none;
+  padding: 10px 0;
+}
+
+.bottom-nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+
+.terms {
+  width: 400px;
+  max-width: 100%;
+
+}
+.terms h3 {
+  padding: 10px 0;
+}
+
+.subscribe {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: row;
+}
+.subscribe input {
+  font-family: 'Cabin', sans-serif;
+  padding: 10px 5px;
+  border: 0;
+  border-radius: 5px 0 0 5px;
+}
+
+.input-container i {
+  background: var(--misc-yellow);
+  padding: 10.5px;
+  border-radius: 0 5px 5px 0;
+}
+
+.social-icons {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.attribution {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.attribution a {
+  color: white;
+}
+
+
+
+
+/* Media Queries */
+
+/* HIDE HAMBURGER MENU ON WIDER SCREEN */
+@media (min-width: 480px) {
+  .hamburger-icon {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 600px) {
+  .hero h2 {
+    font-size: 1.6rem;
+  }
+
+  .smaller-images {
+      display: none;
+  }
+
+}
+
+@media screen and (max-width: 480px) {
+  nav {
+    flex-direction: column;
+  }
+  
+  .logo-container {
+    position: absolute;
+    top: 15px;
+    left: 7vw;
+  }
+
+  .hamburger-icon {
+    display: block;
+  }
+
+
+  .nav-links {
+    flex-direction: column;
+    padding-top: 10px;
+    width: 100%;
+    justify-content: center;
+    gap: 0;
+  }
+
+  .nav-link {
+    padding: 10px 0;
+    text-align: center;
+    border-top: 1px dashed rgba(255, 255, 255, 0.5);
+  }
+
+  .active {
+    display: none;
+  }
+
+  section.hero,
+  section.choose-us,
+  section.caregivers,
+  section.consultation {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .section-header {
+    font-size: 1.9rem;
+  }
+
+  .hero img {
+    max-width: 100%;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .smaller-images {
+      display: none;
+  }
+
+  .footer-grid {
+    flex-direction: column;
+  }
+}
